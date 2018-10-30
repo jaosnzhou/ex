@@ -4,6 +4,8 @@ import "fmt"
 
 var animalList = []string{"fly", "spider", "bird", "cat", "dog", "cow", "horse"}
 
+//var animalList = []string{"spider", "bird", "cat", "dog", "cow"}
+
 func main() {
 	generateSong(animalList)
 }
@@ -20,9 +22,12 @@ func generateSong(aList []string) {
 func openingLyric(animal string) {
 	if animal == "fly" {
 		fmt.Println("There was an old lady who swallowed a " + animal + ".")
+	} else if animal == "horse" {
+		fmt.Println("There was an old lady who swallowed a " + animal + "...")
 	} else {
 		fmt.Println("There was an old lady who swallowed a " + animal + ";")
 	}
+
 }
 func animalFeature(animal string) {
 	switch animal {
@@ -65,5 +70,4 @@ func endingLyric(animal string) {
 // I don't know why she swallowed a fly - perhaps she'll die!    -----endingLyric
 //
 // There was an old lady who swallowed a horse...                -----openingLyric
-// ...She's dead, of course!                                     -----animalFeature(endingLyric?)
-
+// ...She's dead, of course!                                     -----endingLyric
